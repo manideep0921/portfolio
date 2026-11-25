@@ -50,7 +50,7 @@ export function Navbar({ resumeAvailable }: { resumeAvailable: boolean }) {
       }`}
     >
       <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
-        <a href="#home" className="flex items-center gap-2 font-mono text-sm text-fg" aria-label="Manideep Pabbisetty, home">
+        <a href="#home" className="flex items-center gap-2 font-mono text-sm text-fg" aria-label="MP manideep@devops, home">
           <span className="flex h-7 w-7 items-center justify-center rounded-md border border-line-strong bg-surface text-[11px] font-semibold text-accent">
             MP
           </span>

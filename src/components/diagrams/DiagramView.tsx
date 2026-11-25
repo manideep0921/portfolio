@@ -91,7 +91,7 @@ export function DiagramView({
     <div>
       {showHeader && (
         <div className="mb-3">
-          <h4 className="text-base font-semibold text-fg">{diagram.title}</h4>
+          <h3 className="text-base font-semibold text-fg">{diagram.title}</h3>
           <p className="mt-1 max-w-3xl text-sm text-muted">{diagram.blurb}</p>
         </div>
       )}
@@ -185,7 +185,7 @@ export function DiagramView({
                 role="button"
                 tabIndex={0}
                 aria-pressed={isSel}
-                aria-label={`${n.label}${n.sub ? `, ${n.sub}` : ""}. ${illustrative ? "Illustrative." : "Implemented."}`}
+                aria-describedby={`${uid}-${n.id}-d`}
                 className="cursor-pointer outline-none focus-visible:[&>rect]:stroke-[var(--accent)]"
                 onClick={() => setSelectedId(isSel ? null : n.id)}
                 onKeyDown={(ev) => {
@@ -195,6 +195,7 @@ export function DiagramView({
                   }
                 }}
               >
+                <desc id={`${uid}-${n.id}-d`}>{illustrative ? "Illustrative" : "Implemented"}</desc>
                 <rect
                   x={x}
                   y={y}
