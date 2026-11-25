@@ -1,7 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ChevronDown, ExternalLink, Link2Off } from "lucide-react";
+import { ChevronDown, ExternalLink, Lock } from "lucide-react";
+import { profile } from "@/data/profile";
 import { projects, type Project, type ProjectTag } from "@/data/projects";
 import { GithubIcon } from "@/components/ui/BrandIcons";
 import { Reveal } from "@/components/ui/Reveal";
@@ -66,8 +67,14 @@ function ProjectCard({ project }: { project: Project }) {
               <span className="sr-only">(opens in new tab)</span>
             </a>
           ) : (
-            <span className="inline-flex items-center gap-2 text-sm text-subtle" title="Set `repo` for this project in src/data/projects.ts">
-              <Link2Off size={14} aria-hidden /> Repository link not published yet
+            <span className="inline-flex flex-wrap items-center gap-x-2 text-sm text-subtle">
+              <Lock size={14} aria-hidden /> Private repository
+              <a
+                href={`mailto:${profile.email}?subject=${encodeURIComponent(`Repository access request: ${project.title}`)}`}
+                className="text-muted underline decoration-line-strong underline-offset-4 transition-colors hover:text-fg"
+              >
+                available on request
+              </a>
             </span>
           )}
         </div>

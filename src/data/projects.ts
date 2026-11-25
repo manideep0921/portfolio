@@ -2,8 +2,8 @@
  * Featured projects.
  *
  * `repo` is only set where the repository is confirmed to exist.
- * Leave it `null` until a real URL is available; the UI then shows a
- * "repository link not published yet" state instead of a fake link.
+ * Leave it `null` for private repositories; the UI then shows
+ * "Private repository, available on request" with an email link instead of a link.
  */
 
 export type ProjectTag =
