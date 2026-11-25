@@ -17,9 +17,9 @@ export const profile = {
   email: "Manideep.work21@gmail.com",
   github: "https://github.com/manideep0921",
   linkedin: "https://www.linkedin.com/in/pabbisettymanideep",
-  /** Public path of the resume PDF. See public/resume/README.md. */
-  resumePath: "/resume/Manideep_Pabbisetty_Resume.pdf",
-  resumeFile: "Manideep_Pabbisetty_Resume.pdf",
+  /** Public path of the resume PDF. Place the PDF in public/resume/. */
+  resumePath: "/resume/Manideep_Pabbisetty_DevOps_Cloud_Resume.pdf",
+  resumeFile: "Manideep_Pabbisetty_DevOps_Cloud_Resume.pdf",
 } as const;
 
 export const navItems = [
